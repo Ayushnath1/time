@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World Time Zones</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>World Time — Timezones</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>🌍 World Time Zones</h1>
+        <p class="subtitle">Live time for every IANA timezone supported by your browser</p>
+      </div>
 
-  <div class="app">
-    <h1>🌍 World Time Zones</h1>
-    <p class="subtitle">Live time of every country & timezone</p>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search timezones (e.g. Asia, New_York, London)" />
+        <button id="myTime">Show My Timezone</button>
+      </div>
+    </header>
 
-    <input id="search" type="text" placeholder="Search timezone...">
+    <main>
+      <div id="grid" class="grid" aria-live="polite"></div>
+    </main>
 
-    <div id="timeContainer" class="grid"></div>
+    <footer>
+      <small>Times update every second. Accuracy depends on your device clock.</small>
+    </footer>
   </div>
 
   <script src="script.js"></script>
